@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- SQL Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Database Connection Settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sakila</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="show_sql">true</property>
+
+		<!-- Specifying Session Context -->
+		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+
+		<!-- Mapping With Model Class Containing Annotations -->
+		<mapping class="cours.java.stic3.model.Actor" />
+		<mapping class="cours.java.stic3.model.Address" />
+		<mapping class="cours.java.stic3.model.Category" />
+		<mapping class="cours.java.stic3.model.City" />
+		<mapping class="cours.java.stic3.model.Country" />
+		<mapping class="cours.java.stic3.model.Customer" />
+		<mapping class="cours.java.stic3.model.Film" />
+		<mapping class="cours.java.stic3.model.FilmActor" />
+		<mapping class="cours.java.stic3.model.FilmCategory" />
+		<mapping class="cours.java.stic3.model.Inventory" />
+		<mapping class="cours.java.stic3.model.Language" />
+		<mapping class="cours.java.stic3.model.Payment" />
+		<mapping class="cours.java.stic3.model.Rental" />
+		<mapping class="cours.java.stic3.model.Staff" />
+		<mapping class="cours.java.stic3.model.Store" />
+	</session-factory>
+</hibernate-configuration>

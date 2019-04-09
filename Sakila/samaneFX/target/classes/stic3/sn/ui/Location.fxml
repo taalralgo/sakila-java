@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="staffPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="1199.0" style="-fx-background-color: #80d8ff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stic3.sn.ui.LocationController">
+   <children>
+      <ComboBox fx:id="cbxInventaire" layoutX="366.0" layoutY="115.0" prefHeight="26.0" prefWidth="206.0" promptText="Inventaire" />
+      <ComboBox fx:id="cbxClient" layoutX="685.0" layoutY="115.0" prefHeight="26.0" prefWidth="205.0" promptText="Client" />
+      <ComboBox fx:id="cbxStaff" layoutX="685.0" layoutY="167.0" prefHeight="26.0" prefWidth="206.0" promptText="Staff" />
+      <DatePicker fx:id="txtDateRetour" layoutX="421.0" layoutY="167.0" prefHeight="26.0" prefWidth="150.0" promptText="Date de retour" />
+      <TableView fx:id="tableau" layoutX="153.0" layoutY="367.0" prefHeight="310.0" prefWidth="1017.0" style="-fx-background-color: #b3e5fc;">
+        <columns>
+          <TableColumn fx:id="colInventaire" prefWidth="348.8000183105469" text="Inventaire" />
+            <TableColumn fx:id="colClient" prefWidth="348.8000183105469" text="Client" />
+            <TableColumn fx:id="colStaff" prefWidth="348.8000183105469" text="Staff" />
+            <TableColumn fx:id="colDateLocation" prefWidth="348.8000183105469" text="Date de location" />
+            <TableColumn fx:id="colDateRetour" prefWidth="348.8000183105469" text="Date de retour" />
+            <TableColumn fx:id="colLastUpdate" prefWidth="348.8000183105469" text="Last update" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="btnAjouter" layoutX="582.0" layoutY="230.0" mnemonicParsing="false" onAction="#actionAjouter" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #80deea;" stylesheets="@dashboard.css" text="Enregistrer">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnActualiser" layoutX="582.0" layoutY="311.0" mnemonicParsing="false" onAction="#actionActualiser" prefHeight="48.0" prefWidth="45.0" style="-fx-background-color: #80deea;" stylesheets="@dashboard.css">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/actualiser.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnModifier" layoutX="771.0" layoutY="321.0" mnemonicParsing="false" onAction="#actionModifier" prefHeight="27.0" prefWidth="127.0" style="-fx-background-color: #80deea;" stylesheets="@dashboard.css" text="Modifier">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnSupprimer" layoutX="389.0" layoutY="321.0" mnemonicParsing="false" onAction="#actionSupprimer" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #80deea;" stylesheets="@dashboard.css" text="Supprimer">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="14.0" prefHeight="30.0" prefWidth="384.0" text="GESTION DES LOCATIONS" textAlignment="CENTER" textFill="#22009a">
+         <font>
+            <Font name="Algerian" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
